@@ -1,15 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Navbar = ({ props: { icon, title } }) => {
-  return (
-    <nav className='navbar bg-primary'>
-      <h1>
-        <i className={icon}></i> {title}
-      </h1>
-    </nav>
-  );
-};
+const Navbar = props => (
+  <nav className='navbar bg-primary'>
+    <h1>
+      <i className={props.icon}></i> {props.title}
+    </h1>
+  </nav>
+);
 
 Navbar.defaultProps = {
   title: "Github Finder",
