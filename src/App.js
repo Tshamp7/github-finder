@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Alert from "./components/layout/Alert";
@@ -8,6 +8,7 @@ import User from "./components/users/User";
 import GithubState from "./context/github/GithubState";
 import AlertState from "./context/alert/AlertState";
 import Home from "./components/pages/Home";
+import NotFound from "./components/pages/NotFound";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/user/:login' component={User} />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
